@@ -5,11 +5,11 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.9.0",
-    "@testing-library/react": "^10.2.0",
+    "@testing-library/react": "^10.2.1",
     "@testing-library/user-event": "^11.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-endless-scroll": "^1.0.0",
+    "react-endless-scroll": "^1.0.4",
     "react-scripts": "3.4.1"
   },
   "scripts": {

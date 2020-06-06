@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import EndlessScroll from "./EndlessScroll";
 import EndlessScroll from "react-endless-scroll";
 import "./App.css";
 
@@ -32,13 +33,16 @@ function App() {
   const [seed, setSeed] = useState(0);
 
   async function fetch() {
+    console.log('fetching');
     setIsLoading(true);
     const data = await fetchData(seed);
 
     setElements((curr) => [...curr, ...data]);
     setSeed(seed + 10);
     setHasMore(Math.random() > 0.05);
+    setHasMore(true);
     setIsLoading(false);
+    console.log('done fetching');
   }
 
   return (
@@ -47,7 +51,7 @@ function App() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        "align-items": "center",
+        "alignItems": "center",
       }}
     >
       <EndlessScroll
@@ -56,7 +60,7 @@ function App() {
         hasMore={hasMore}
       >
         {elements.map((element) => (
-          <Element>{element}</Element>
+          <Element key={element}>{element}</Element>
         ))}
       </EndlessScroll>
       {!hasMore && <p>You've reached the bottom!</p>}

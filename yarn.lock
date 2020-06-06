@@ -1458,10 +1458,10 @@
     lodash "^4.17.15"
     redent "^3.0.0"
 
-"@testing-library/react@^10.2.0":
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-10.2.0.tgz#dde740cb7374c93cefec4faa750c4b50dca7bf3f"
-  integrity sha512-TYQZ4vz0lGCGRgFqQivrtUGQhAlRSxHlYB0sDFJ6h2BZ0IrgRMF3EDQixn5UJk8oMsZJuE1HNnOA0yP4Ci2kyA==
+"@testing-library/react@^10.2.1":
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-10.2.1.tgz#f0c5ac9072ad54c29672150943f35d6617263f26"
+  integrity sha512-pv2jZhiZgN1/alz1aImhSasZAOPg3er2Kgcfg9fzuw7aKPLxVengqqR1n0CJANeErR1DqORauQaod+gGUgAJOQ==
   dependencies:
     "@babel/runtime" "^7.10.2"
     "@testing-library/dom" "^7.9.0"
@@ -3842,9 +3842,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.378, electron-to-chromium@^1.3.413:
-  version "1.3.462"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.462.tgz#82087404c20ed664963ececab23337ac7a150e21"
-  integrity sha512-HST/xWLOeA0LGUhxBqvcPDDUGHjB6rn99VBgPWmaHv+zqwXgOaZO5RnRcd5owjRE7nh+z1c0SwcK8qP8o7sofg==
+  version "1.3.463"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.463.tgz#bae89d8c2c69b4be32f80221fe49ab5786fab368"
+  integrity sha512-mAqvpG0efJXV9BGXPVjFdBFiqmawGoIc+c8T2uXYEvbV1/261PaOT0EzZ9dKW4IdGiHXQGSKnnOU86QhJ+5JcA==
 
 elliptic@^6.0.0, elliptic@^6.5.2:
   version "6.5.2"
@@ -8681,10 +8681,10 @@ react-dom@^16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
-react-endless-scroll@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-endless-scroll/-/react-endless-scroll-1.0.0.tgz#558d4bae0ffed69220757e32dc4d4c4e29a3dd41"
-  integrity sha512-/4rZ6xQGrE78WOmWXzm9GNBLnirn/ewrmLTzR3lGQHaHoCLH6AcCBPZrCRkgKphmtvu8CNDoA/woXdwri5YZeA==
+react-endless-scroll@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-endless-scroll/-/react-endless-scroll-1.0.4.tgz#f5327fdf4d5c26bb60693cebbfed1833a6803e46"
+  integrity sha512-xcYYaBtSEQ5VapYfO+9PwOaF/8GTljziBNlhf8Uge/pToE/0jqJlODXWVOQIjIM+1nG7FwengdfxEmmSoA5qBQ==
 
 react-error-overlay@^6.0.7:
   version "6.0.7"
