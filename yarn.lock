@@ -8681,10 +8681,10 @@ react-dom@^16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
-react-endless-scroll@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/react-endless-scroll/-/react-endless-scroll-1.0.4.tgz#f5327fdf4d5c26bb60693cebbfed1833a6803e46"
-  integrity sha512-xcYYaBtSEQ5VapYfO+9PwOaF/8GTljziBNlhf8Uge/pToE/0jqJlODXWVOQIjIM+1nG7FwengdfxEmmSoA5qBQ==
+react-endless-scroll@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-endless-scroll/-/react-endless-scroll-1.0.5.tgz#dd0488055d9c8edae9c31a11e5b6c40813489dab"
+  integrity sha512-XSRW8w3Ma4e0QQK5ih7Wf31YPInQH25lZ8w69RcddDnV1g7Yju2AR2/ROUmynqKfrUQgzyvlsOujcI3e2R9MtA==
 
 react-error-overlay@^6.0.7:
   version "6.0.7"
