@@ -33,16 +33,13 @@ function App() {
   const [seed, setSeed] = useState(0);
 
   async function fetch() {
-    console.log('fetching');
     setIsLoading(true);
     const data = await fetchData(seed);
 
     setElements((curr) => [...curr, ...data]);
     setSeed(seed + 10);
     setHasMore(Math.random() > 0.05);
-    setHasMore(true);
     setIsLoading(false);
-    console.log('done fetching');
   }
 
   return (
@@ -51,7 +48,7 @@ function App() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        "alignItems": "center",
+        alignItems: "center",
       }}
     >
       <EndlessScroll
