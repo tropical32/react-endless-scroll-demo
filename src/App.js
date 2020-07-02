@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-// import EndlessScroll from "./EndlessScroll";
-import EndlessScroll from "react-endless-scroll";
+import EndlessScroll from "./EndlessScroll";
+//import EndlessScroll from "react-endless-scroll";
 import "./App.css";
+import styled from 'styled-components'
+
+const StyledEndlessScroll = styled(EndlessScroll)`
+`;
 
 function fetchData(seed) {
   return new Promise((resolve) => {
@@ -18,7 +22,7 @@ function Element({ children }) {
         padding: "40px",
         marginBottom: "10px",
         marginTop: "10px",
-        backgroundColor: "cornflowerblue",
+        backgroundColor: "pink",
       }}
     >
       {children}
@@ -40,7 +44,6 @@ function App() {
     setElements((curr) => [...curr, ...data]);
     setSeed(seed + 10);
     setHasMore(Math.random() > 0.05);
-    setHasMore(true);
     setIsLoading(false);
     console.log('done fetching');
   }
@@ -54,7 +57,7 @@ function App() {
         "alignItems": "center",
       }}
     >
-      <EndlessScroll
+      <StyledEndlessScroll
         onReachBottom={fetch}
         isLoading={isLoading}
         hasMore={hasMore}
@@ -62,7 +65,7 @@ function App() {
         {elements.map((element) => (
           <Element key={element}>{element}</Element>
         ))}
-      </EndlessScroll>
+      </StyledEndlessScroll>
       {!hasMore && <p>You've reached the bottom!</p>}
     </div>
   );

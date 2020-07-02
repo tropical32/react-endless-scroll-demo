@@ -1,65 +1,41 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
+import "./EndlessScroll.css";
 
 export function EndlessScroll({
   onReachBottom = () => {},
   isLoading = false,
   hasMore = false,
   children = null,
-  threshold = 0.2,
-  topWrapperClassName = "endless-scroll-top-wrapper",
-  middleWrapperClassName = "endless-scroll-middle-wrapper",
-  bottomWrapperClassName = "endless-scroll-bottom-wrapper",
+  threshold = 0.0,
+  className = "",
 }) {
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  const container = useRef();
+  const loader = useRef(null);
 
   useEffect(() => {
-    const options = {
-      threshold: [threshold],
-    };
-
-    const callback = (entries) => {
-      console.log(entries[0]);
+    const loadMore = (entries) => {
       const [first] = entries;
 
-      setIsIntersecting(first.isIntersecting);
+      if (!isLoading && hasMore && first.isIntersecting) {
+        onReachBottom();
+      }
     };
 
-    const observer = new IntersectionObserver(callback, options);
-    const containerCurrent = container.current;
+    const options = { threshold: [threshold] };
+    const observer = new IntersectionObserver(loadMore, options);
 
-    observer.observe(containerCurrent);
-
-    return () => observer.unobserve(containerCurrent);
-  }, [threshold]);
-
-  useEffect(() => {
-    console.log('isLoading', isLoading, 'hasMore', hasMore, 'isIntersecting', isIntersecting);
-    if (!isLoading && hasMore && isIntersecting) {
-       onReachBottom();
+    const loaderCurrent = loader.current;
+    if (loaderCurrent) {
+      observer.observe(loaderCurrent);
     }
-    // eslint-disable-next-line
-  }, [hasMore, isLoading, isIntersecting]);
+
+    return () => observer.unobserve(loaderCurrent);
+  }, [hasMore, isLoading, onReachBottom, threshold]);
 
   return (
-    <div className={topWrapperClassName}>
+    <div className={`endless-scroll-wrapper ${className}`}>
       {children}
-      <div
-        className={middleWrapperClassName}
-        style={{ position: "relative" }}
-      >
-        <div
-          ref={container}
-          className={bottomWrapperClassName}
-          style={{
-            background:'gray',
-            bottom: "0px",
-            height: "100px",
-            left: 0,
-            position: "absolute",
-            width: "100%",
-          }}
-        />
+      <div className="endless-scroll-loader-wrapper">
+        <div ref={loader} className="endless-scroll-loader" />
       </div>
     </div>
   );

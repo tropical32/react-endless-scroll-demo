@@ -1,0 +1,11 @@
+.endless-scroll-loader-wrapper {
+  position: relative;
+}
+
+.endless-scroll-loader {
+  bottom: 0px;
+  height: 100px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
